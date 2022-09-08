@@ -1,23 +1,23 @@
 package com.hidro.system.Dth22_api;
 
 public class Dth22_response {
-    private String data;
+    private String message;
     public Dth22_response(){
-        data = "Hola world";
+        message = "Hola bombona te amooooo o o oo o <3";
     }
 
     @Override
     public String toString() {
         return "Dth22_response{" +
-                "data='" + data + '\'' +
+                "data='" + message + '\'' +
                 '}';
     }
 
-    public String getData() {
-        return data;
+    public String getMessage() {
+        return message;
     }
 
-    public void setData(String data) {
-        this.data = data;
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
