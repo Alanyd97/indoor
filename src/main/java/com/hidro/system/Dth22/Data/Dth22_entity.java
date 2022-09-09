@@ -1,12 +1,10 @@
 package com.hidro.system.Dth22.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "Dth22")
 public class Dth22_entity {
     @Id
     @GeneratedValue

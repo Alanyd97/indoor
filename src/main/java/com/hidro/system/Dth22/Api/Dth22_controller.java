@@ -19,6 +19,10 @@ public class Dth22_controller {
         public ResponseEntity<List<Dth22_entity>> getDataById() {
             return new ResponseEntity(dth22_service_impl.findAll(), HttpStatus.OK);
         }
+        @GetMapping("/ping")//TODO deberia ser response
+        public ResponseEntity<String> ping() {
+            return new ResponseEntity("pong", HttpStatus.OK);
+        }
 
         @PostMapping("save")
         public ResponseEntity<Dth22_response> saveData(@RequestBody Dth22_request dth22_request) {
