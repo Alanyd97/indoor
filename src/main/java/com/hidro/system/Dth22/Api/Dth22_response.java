@@ -1,4 +1,4 @@
-package com.hidro.system.Dth22_api;
+package com.hidro.system.Dth22.Api;
 
 public class Dth22_response {
     private String message;
