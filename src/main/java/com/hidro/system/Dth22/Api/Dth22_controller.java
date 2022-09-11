@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("")
@@ -27,9 +28,12 @@ public class Dth22_controller {
 
         //@PostMapping("save",consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
         @RequestMapping(value = "/save", method = RequestMethod.POST,consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-        public ResponseEntity<Dth22_response> saveData(@RequestParam  Dth22_request dth22_request) {
+        public ResponseEntity<Dth22_response> saveData(@RequestParam Map<String,String> allParams) {
             //TODO guardar los datos que el modulo wifi mande
-            return new ResponseEntity(dth22_service_impl.save(dth22_request), HttpStatus.OK);
+            return new ResponseEntity(dth22_service_impl.save(
+                    new Dth22_request(
+                        new Integer(allParams.get("temperature")),
+                        new Integer(allParams.get("humidity")))), HttpStatus.OK);
         }
 
 }
