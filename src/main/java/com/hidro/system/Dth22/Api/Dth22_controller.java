@@ -4,13 +4,14 @@ import com.hidro.system.Dth22.Data.Dth22_entity;
 import com.hidro.system.Dth22.Service.Dth22_service_impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/")
+@RequestMapping("")
 public class Dth22_controller {
         @Autowired
         Dth22_service_impl dth22_service_impl;
@@ -24,8 +25,9 @@ public class Dth22_controller {
             return new ResponseEntity("pong", HttpStatus.OK);
         }
 
-        @PostMapping("save")
-        public ResponseEntity<Dth22_response> saveData(@RequestBody Dth22_request dth22_request) {
+        //@PostMapping("save",consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+        @RequestMapping(value = "/save", method = RequestMethod.POST,consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
+        public ResponseEntity<Dth22_response> saveData(Dth22_request dth22_request) {
             //TODO guardar los datos que el modulo wifi mande
             return new ResponseEntity(dth22_service_impl.save(dth22_request), HttpStatus.OK);
         }
