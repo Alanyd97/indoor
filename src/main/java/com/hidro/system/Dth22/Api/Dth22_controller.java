@@ -32,8 +32,8 @@ public class Dth22_controller {
             //TODO guardar los datos que el modulo wifi mande
             return new ResponseEntity(dth22_service_impl.save(
                     new Dth22_request(
-                        new Integer(allParams.get("temperature")),
-                        new Integer(allParams.get("humidity")))), HttpStatus.OK);
+                        allParams.get("temperature"),
+                        allParams.get("humidity"))), HttpStatus.OK);
         }
 
 }

@@ -20,8 +20,8 @@ public class Dth22_service_impl {
     }
 
     public Dth22_response save(Dth22_request request){
-        Dth22_entity resp = dth22_repository.save(new Dth22_entity(request.getTemperature(), request.getHumidity(), new Date()));
-        return new Dth22_response(resp.toString());
+        //Dth22_entity resp = dth22_repository.save(new Dth22_entity(request.getTemperature(), request.getHumidity(), new Date()));
+        return new Dth22_response(request.toString());
     }
 
 

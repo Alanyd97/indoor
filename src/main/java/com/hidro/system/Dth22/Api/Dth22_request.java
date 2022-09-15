@@ -4,11 +4,11 @@ package com.hidro.system.Dth22.Api;
 
 public class Dth22_request {
 
-    private Integer temperature;
+    private String temperature;
 
-    private Integer humidity;
+    private String humidity;
 
-    public Dth22_request(Integer temperature, Integer humidity) {
+    public Dth22_request(String temperature, String humidity) {
         this.temperature = temperature;
         this.humidity = humidity;
     }
@@ -16,19 +16,19 @@ public class Dth22_request {
     public Dth22_request() {
     }
 
-    public Integer getTemperature() {
+    public String getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(Integer temperature) {
+    public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
 
-    public Integer getHumidity() {
+    public String getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(Integer humidity) {
+    public void setHumidity(String humidity) {
         this.humidity = humidity;
     }
 }
