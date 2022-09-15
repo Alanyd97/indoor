@@ -8,18 +8,18 @@ import java.util.Date;
 public class Dth22_entity {
     @Id
     @GeneratedValue
-    private Integer id;
+    private Long id;
 
     @Column
-    private Integer temperature;
+    private String temperature;
 
     @Column
-    private Integer humidity;
+    private String humidity;
 
     @Column
     private Date date;
 
-    public Dth22_entity(Integer temperature, Integer humidity, Date date) {
+    public Dth22_entity(String temperature, String humidity, Date date) {
         this.temperature = temperature;
         this.humidity = humidity;
         this.date = date;
@@ -39,23 +39,23 @@ public class Dth22_entity {
                 '}';
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public Integer getTemperature() {
+    public String getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(Integer temperature) {
+    public void setTemperature(String temperature) {
         this.temperature = temperature;
     }
 
-    public Integer getHumidity() {
+    public String getHumidity() {
         return humidity;
     }
 
-    public void setHumidity(Integer humidity) {
+    public void setHumidity(String humidity) {
         this.humidity = humidity;
     }
 
