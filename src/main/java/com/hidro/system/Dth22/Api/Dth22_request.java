@@ -31,4 +31,12 @@ public class Dth22_request {
     public void setHumidity(String humidity) {
         this.humidity = humidity;
     }
+
+    @Override
+    public String toString() {
+        return "Dth22_request{" +
+                "temperature='" + temperature + '\'' +
+                ", humidity='" + humidity + '\'' +
+                '}';
+    }
 }
